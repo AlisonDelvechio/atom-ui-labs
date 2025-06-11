@@ -1,4 +1,17 @@
-<h1>Bem-vindo ao Demo App Angular</h1>
+<h1>Botão vindo do Stencil:</h1>
 
-<!-- Aqui vamos testar o componente do Stencil -->
-<my-component></my-component>
+<atom-button
+  label="Clique aqui"
+  variant="primary"
+  (atomClick)="handleStencilClick()"
+>
+  Clique aqui!
+</atom-button>
+
+<atom-button
+  label="Clique aqui"
+  variant="secondary"
+  (atomClick)="handleStencilClick()"
+>
+  Não! Clique aqui!
+</atom-button>
