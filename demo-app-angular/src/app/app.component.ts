@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppComponent {
-  title = 'demo-app-angular';
-}
+export class AppComponent {}
