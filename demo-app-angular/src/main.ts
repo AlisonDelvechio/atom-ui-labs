@@ -6,4 +6,4 @@ import { defineCustomElements } from 'atom-ui/loader';
 defineCustomElements();
 
 bootstrapApplication(AppComponent, appConfig)
-.catch((err) => console.error(err));
+  .catch((err) => console.error(err));
