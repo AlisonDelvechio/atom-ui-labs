@@ -1,3 +1,23 @@
+<h2>Componentes disponíveis</h2>
+
+<input
+  type="text"
+  placeholder="Buscar componente..."
+  [(ngModel)]="search"
+  class="search"
+/>
+
+<div class="grid">
+  <a
+    *ngFor="let comp of filteredComponents"
+    [routerLink]="comp.path"
+    class="card"
+  >
+    <h3>{{ comp.name }}</h3>
+    <p>{{ comp.description }}</p>
+  </a>
+</div>
+
 <section class="intro">
   <h2>
     <mat-icon aria-hidden="true">library_books</mat-icon>
@@ -13,8 +33,8 @@
     Para começar, você pode clonar ou baixar este projeto via GitHub:
   </p>
   <div class="code-block">
-    <pre><code>git clone https://github.com/seu-usuario/atom-ui-labs</code></pre>
-    <button (click)="copy('git clone https://github.com/seu-usuario/atom-ui-labs')">Copiar</button>
+    <pre><code>git clone https://github.com/AlisonDelvechio/atom-ui-labs.git</code></pre>
+    <button (click)="copy('git clone https://github.com/AlisonDelvechio/atom-ui-labs.git')">Copiar</button>
   </div>
 
   <p>
@@ -58,23 +78,3 @@ npm run build</code></pre>
     os componentes estejam registrados no DOM.
   </p>
 </section>
-
-<h2>Componentes disponíveis</h2>
-
-<input
-  type="text"
-  placeholder="Buscar componente..."
-  [(ngModel)]="search"
-  class="search"
-/>
-
-<div class="grid">
-  <a
-    *ngFor="let comp of filteredComponents"
-    [routerLink]="comp.path"
-    class="card"
-  >
-    <h3>{{ comp.name }}</h3>
-    <p>{{ comp.description }}</p>
-  </a>
-</div>
