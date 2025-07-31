@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/demo-app-angular/browser",
+            "outputPath": "dist/demo-app-angular",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -28,8 +28,7 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public",
-                "src/_redirects"
+                "input": "public"
               }
             ],
             "styles": [
