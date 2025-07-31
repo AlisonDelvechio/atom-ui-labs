@@ -1,0 +1,4 @@
+[build]
+base = "demo-app-angular"
+publish = "dist/demo-app-angular/browser"
+command = "npm run build"
