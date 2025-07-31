@@ -1,3 +1,64 @@
+<section class="intro">
+  <h2>
+    <mat-icon aria-hidden="true">library_books</mat-icon>
+    Como instalar e usar o <code>atom-ui</code>
+  </h2>
+
+  <p>
+    O <code>atom-ui</code> é uma biblioteca de Web Components desenvolvida com Stencil,
+    pensada para ser utilizada de forma agnóstica em qualquer framework, incluindo Angular.
+  </p>
+
+  <p>
+    Para começar, você pode clonar ou baixar este projeto via GitHub:
+  </p>
+  <div class="code-block">
+    <pre><code>git clone https://github.com/seu-usuario/atom-ui-labs</code></pre>
+    <button (click)="copy('git clone https://github.com/seu-usuario/atom-ui-labs')">Copiar</button>
+  </div>
+
+  <p>
+    Em seguida, acesse o diretório da biblioteca e instale as dependências:
+  </p>
+  <div class="code-block">
+    <pre><code>cd atom-ui-labs/atom-ui
+npm install
+npm run build</code></pre>
+    <button (click)="copy('cd atom-ui-labs/atom-ui\nnpm install\nnpm run build')">Copiar</button>
+  </div>
+
+  <p>
+    Agora, para utilizar a biblioteca em outro projeto Angular, você pode instalar o pacote da
+    seguinte forma:
+  </p>
+  <div class="code-block">
+    <pre><code>npm install atom-ui</code></pre>
+    <button (click)="copy('npm install atom-ui')">Copiar</button>
+  </div>
+
+  <p>
+    Ou, se estiver trabalhando no monorepo com link local:
+  </p>
+  <div class="code-block">
+    <pre><code>"atom-ui": "file:../atom-ui"</code></pre>
+    <button (click)="copy(monorepoInstall)">Copiar</button>
+  </div>
+
+  <p>
+    Após instalar o pacote, importe e inicialize os Web Components no seu <code>main.ts</code>:
+  </p>
+  <div class="code-block">
+    <pre><code>import {{ '{' }} defineCustomElements {{ '}' }} from 'atom-ui/loader';</code></pre>
+    <pre><code>defineCustomElements();</code></pre>
+    <button (click)="copy(loaderCode)">Copiar</button>
+  </div>
+
+  <p>
+    Essa chamada deve ser feita <strong>antes</strong> do <code>bootstrapApplication()</code> para garantir que
+    os componentes estejam registrados no DOM.
+  </p>
+</section>
+
 <h2>Componentes disponíveis</h2>
 
 <input
