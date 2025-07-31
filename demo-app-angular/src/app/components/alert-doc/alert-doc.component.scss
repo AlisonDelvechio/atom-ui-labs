@@ -1,0 +1,49 @@
+@use '../../styles/variables' as *;
+
+.example-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+  .example {
+    background: $white;
+    padding: 1rem;
+    border-radius: $radius-base;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
+    .alert-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: flex-start;
+
+      atom-alert {
+        flex: 1 1 45%;
+        min-width: 280px;
+      }
+    }
+  }
+}
+
+.prop-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  th {
+    background-color: $gray-100;
+  }
+
+  td code {
+    color: $blue-600;
+    font-weight: bold;
+  }
+}

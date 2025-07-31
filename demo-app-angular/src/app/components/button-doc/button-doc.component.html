@@ -1,0 +1,62 @@
+<h2>📘 Componente: <code>&lt;atom-button&gt;</code></h2>
+
+<p>
+  O <code>&lt;atom-button&gt;</code> é um botão reutilizável do Design System <strong>Atom UI</strong>,
+  criado com Stencil e integrado via Web Components.
+</p>
+
+<h3>🧪 Exemplos</h3>
+
+<div class="example-grid">
+  <div class="example">
+    <p><strong>Primary</strong></p>
+    <atom-button
+      label="Clique aqui"
+      variant="primary"
+      (atomClick)="handleStencilClick()"
+    >
+      Clique aqui!
+    </atom-button>
+  </div>
+
+  <div class="example">
+    <p><strong>Secondary</strong></p>
+    <atom-button
+      label="Clique aqui"
+      variant="secondary"
+      (atomClick)="handleStencilClick()"
+    >
+      Clique aqui!
+    </atom-button>
+  </div>
+</div>
+
+<h3>⚙️ Propriedades</h3>
+<table class="prop-table">
+  <thead>
+    <tr>
+      <th>Propriedade</th>
+      <th>Tipo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>label</code></td>
+      <td><code>string</code></td>
+      <td>Texto alternativo do botão (acessibilidade)</td>
+    </tr>
+    <tr>
+      <td><code>variant</code></td>
+      <td><code>'primary' | 'secondary'</code></td>
+      <td>Define o estilo visual do botão</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>🎯 Eventos</h3>
+<ul>
+  <li>
+    <code>(atomClick)</code>: Emitido quando o botão é clicado
+  </li>
+</ul>

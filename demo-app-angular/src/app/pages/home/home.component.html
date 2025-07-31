@@ -1,0 +1,19 @@
+<h2>Componentes disponíveis</h2>
+
+<input
+  type="text"
+  placeholder="Buscar componente..."
+  [(ngModel)]="search"
+  class="search"
+/>
+
+<div class="grid">
+  <a
+    *ngFor="let comp of filteredComponents"
+    [routerLink]="comp.path"
+    class="card"
+  >
+    <h3>{{ comp.name }}</h3>
+    <p>{{ comp.description }}</p>
+  </a>
+</div>

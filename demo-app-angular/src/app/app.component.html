@@ -1,131 +1,14 @@
-<h1>Botão vindo do Stencil:</h1>
+<header class="nav">
+  <div class="container">
+    <h1>📘 Documentação Atom UI</h1>
+    <nav>
+      <a routerLink="/">Home</a>
+      <!-- <a routerLink="/button">Botão</a>
+      <a routerLink="/alert">Alerta</a> -->
+    </nav>
+  </div>
+</header>
 
-<atom-button
-  label="Clique aqui"
-  variant="primary"
-  (atomClick)="handleStencilClick()"
->
-  Clique aqui!
-</atom-button>
-
-<atom-button
-  label="Clique aqui"
-  variant="secondary"
-  (atomClick)="handleStencilClick()"
->
-  Não! Clique aqui!
-</atom-button>
-
-<br><br><br><br>
-
-<!-- Alert -->
-<atom-alert
-  device="web"
-  status="success"
-  icon="check"
-  text="Lorem ipsum dolor sit amet, consectetur."
-  textcolor="text-green-700"
-  strokeColor="stroke-green-200"
-  iconColor="text-green-700"
-  [hasStatusIcon]="true"
-  [hasCloseIcon]="true"
-  (atomClick)="handleStencilClick()"
-></atom-alert>
-<br>
-
-<atom-alert
-  device="mobile"
-  status="success"
-  icon="check"
-  text="Lorem ipsum dolor sit amet, consectetur."
-  textcolor="text-green-700"
-  strokeColor="stroke-green-200"
-  iconColor="text-green-700"
-  [hasStatusIcon]="true"
-  [hasCloseIcon]="true"
-  (atomClick)="handleStencilClick()"
-></atom-alert>
-<br>
-
-<atom-alert
-  device="web"
-  status="warning"
-  icon="warning"
-  text="Lorem ipsum dolor sit amet, consectetur."
-  textcolor="text-yellow-700"
-  strokeColor="stroke-yellow-200"
-  iconColor="icon-yellow-600"
-  [hasStatusIcon]="true"
-  [hasCloseIcon]="true"
-  (atomClick)="handleStencilClick()"
-></atom-alert>
-<br>
-
-<atom-alert
-  device="mobile"
-  status="warning"
-  icon="warning"
-  text="Lorem ipsum dolor sit amet, consectetur."
-  textcolor="text-yellow-700"
-  strokeColor="stroke-yellow-200"
-  iconColor="icon-yellow-600"
-  [hasStatusIcon]="true"
-  [hasCloseIcon]="true"
-  (atomClick)="handleStencilClick()"
-></atom-alert>
-<br>
-
-<atom-alert
-  device="web"
-  status="error"
-  icon="error"
-  text="Lorem ipsum dolor sit amet, consectetur."
-  textcolor="text-red-700"
-  strokeColor="stroke-red-200"
-  iconColor="icon-red-600"
-  [hasStatusIcon]="true"
-  [hasCloseIcon]="true"
-  (atomClick)="handleStencilClick()"
-></atom-alert>
-<br>
-
-<atom-alert
-  device="mobile"
-  status="error"
-  icon="error"
-  text="Lorem ipsum dolor sit amet, consectetur."
-  textcolor="text-red-700"
-  strokeColor="stroke-red-200"
-  iconColor="icon-red-600"
-  [hasStatusIcon]="true"
-  [hasCloseIcon]="true"
-  (atomClick)="handleStencilClick()"
-></atom-alert>
-<br>
-
-<atom-alert
-  device="web"
-  status="info"
-  icon="info"
-  text="Lorem ipsum dolor sit amet, consectetur."
-  textcolor="text-blue-700"
-  strokeColor="stroke-blue-200"
-  iconColor="icon-blue-600"
-  [hasStatusIcon]="true"
-  [hasCloseIcon]="true"
-  (atomClick)="handleStencilClick()"
-></atom-alert>
-<br>
-
-<atom-alert
-  device="mobile"
-  status="info"
-  icon="info"
-  text="Lorem ipsum dolor sit amet, consectetur."
-  textcolor="text-blue-700"
-  strokeColor="stroke-blue-200"
-  iconColor="icon-blue-600"
-  [hasStatusIcon]="true"
-  [hasCloseIcon]="true"
-  (atomClick)="handleStencilClick()"
-></atom-alert>
+<main class="content">
+  <router-outlet></router-outlet>
+</main>

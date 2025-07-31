@@ -1,0 +1,39 @@
+@use '../app/styles/variables' as *;
+
+.nav {
+  background-color: $white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.25rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+
+      a {
+        text-decoration: none;
+        color: $blue-600;
+        font-weight: $font-weight-semibold;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  padding: 2rem 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+}

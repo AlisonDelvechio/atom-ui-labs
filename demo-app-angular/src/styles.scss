@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@use '../src/app/styles/variables' as *;
+
+body {
+  margin: 0;
+  font-family: $font-family-base;
+  background-color: $gray-100;
+  color: $gray-700;
+  font-size: $font-size-base;
+}

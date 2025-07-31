@@ -1,0 +1,205 @@
+<h2>📘 Componente: <code>&lt;atom-alert&gt;</code></h2>
+
+<p>
+  O <code>&lt;atom-alert&gt;</code> exibe mensagens de alerta com estilos distintos para indicar sucesso,
+  erro, aviso ou informação. Suporta variações para dispositivos <strong>web</strong> e <strong>mobile</strong>,
+  e pode exibir ícones e botão de fechar.
+</p>
+
+<h3>🧪 Exemplos</h3>
+
+<div class="example-grid">
+
+  <!-- Sucesso -->
+  <div class="example">
+    <p><strong>Success – Web & Mobile</strong></p>
+    <div class="alert-row">
+      <atom-alert
+        device="web"
+        status="success"
+        icon="check"
+        text="Mensagem de sucesso"
+        textcolor="text-green-700"
+        strokeColor="stroke-green-200"
+        iconColor="text-green-700"
+        [hasStatusIcon]="true"
+        [hasCloseIcon]="true"
+        (atomClick)="handleStencilClick()"
+      ></atom-alert>
+
+      <atom-alert
+        device="mobile"
+        status="success"
+        icon="check"
+        text="Mensagem de sucesso"
+        textcolor="text-green-700"
+        strokeColor="stroke-green-200"
+        iconColor="text-green-700"
+        [hasStatusIcon]="true"
+        [hasCloseIcon]="true"
+        (atomClick)="handleStencilClick()"
+      ></atom-alert>
+    </div>
+  </div>
+
+  <!-- Warning -->
+  <div class="example">
+    <p><strong>Warning – Web & Mobile</strong></p>
+    <div class="alert-row">
+      <atom-alert
+        device="web"
+        status="warning"
+        icon="warning"
+        text="Atenção: algo requer sua atenção."
+        textcolor="text-yellow-700"
+        strokeColor="stroke-yellow-200"
+        iconColor="icon-yellow-600"
+        [hasStatusIcon]="true"
+        [hasCloseIcon]="true"
+        (atomClick)="handleStencilClick()"
+      ></atom-alert>
+
+      <atom-alert
+        device="mobile"
+        status="warning"
+        icon="warning"
+        text="Atenção: algo requer sua atenção."
+        textcolor="text-yellow-700"
+        strokeColor="stroke-yellow-200"
+        iconColor="icon-yellow-600"
+        [hasStatusIcon]="true"
+        [hasCloseIcon]="true"
+        (atomClick)="handleStencilClick()"
+      ></atom-alert>
+    </div>
+  </div>
+
+  <!-- Error -->
+  <div class="example">
+    <p><strong>Error – Web & Mobile</strong></p>
+    <div class="alert-row">
+      <atom-alert
+        device="web"
+        status="error"
+        icon="error"
+        text="Erro ao processar a ação."
+        textcolor="text-red-700"
+        strokeColor="stroke-red-200"
+        iconColor="icon-red-600"
+        [hasStatusIcon]="true"
+        [hasCloseIcon]="true"
+        (atomClick)="handleStencilClick()"
+      ></atom-alert>
+
+      <atom-alert
+        device="mobile"
+        status="error"
+        icon="error"
+        text="Erro ao processar a ação."
+        textcolor="text-red-700"
+        strokeColor="stroke-red-200"
+        iconColor="icon-red-600"
+        [hasStatusIcon]="true"
+        [hasCloseIcon]="true"
+        (atomClick)="handleStencilClick()"
+      ></atom-alert>
+    </div>
+  </div>
+
+  <!-- Info -->
+  <div class="example">
+    <p><strong>Info – Web & Mobile</strong></p>
+    <div class="alert-row">
+      <atom-alert
+        device="web"
+        status="info"
+        icon="info"
+        text="Informação adicional."
+        textcolor="text-blue-700"
+        strokeColor="stroke-blue-200"
+        iconColor="icon-blue-600"
+        [hasStatusIcon]="true"
+        [hasCloseIcon]="true"
+        (atomClick)="handleStencilClick()"
+      ></atom-alert>
+
+      <atom-alert
+        device="mobile"
+        status="info"
+        icon="info"
+        text="Informação adicional."
+        textcolor="text-blue-700"
+        strokeColor="stroke-blue-200"
+        iconColor="icon-blue-600"
+        [hasStatusIcon]="true"
+        [hasCloseIcon]="true"
+        (atomClick)="handleStencilClick()"
+      ></atom-alert>
+    </div>
+  </div>
+
+</div>
+
+<h3>⚙️ Propriedades</h3>
+
+<table class="prop-table">
+  <thead>
+    <tr>
+      <th>Propriedade</th>
+      <th>Tipo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>device</code></td>
+      <td><code>'web' | 'mobile'</code></td>
+      <td>Define o layout do alerta (largura, altura, etc)</td>
+    </tr>
+    <tr>
+      <td><code>status</code></td>
+      <td><code>'success' | 'error' | 'warning' | 'info'</code></td>
+      <td>Define a cor base e o estilo do alerta</td>
+    </tr>
+    <tr>
+      <td><code>icon</code></td>
+      <td><code>string</code></td>
+      <td>Define o nome do ícone SVG</td>
+    </tr>
+    <tr>
+      <td><code>text</code></td>
+      <td><code>string</code></td>
+      <td>Mensagem principal exibida no alerta</td>
+    </tr>
+    <tr>
+      <td><code>textcolor</code></td>
+      <td><code>string</code></td>
+      <td>Classe CSS com a cor do texto</td>
+    </tr>
+    <tr>
+      <td><code>strokeColor</code></td>
+      <td><code>string</code></td>
+      <td>Classe CSS para a borda lateral (stroke)</td>
+    </tr>
+    <tr>
+      <td><code>iconColor</code></td>
+      <td><code>string</code></td>
+      <td>Classe CSS com a cor do ícone SVG</td>
+    </tr>
+    <tr>
+      <td><code>hasStatusIcon</code></td>
+      <td><code>boolean</code></td>
+      <td>Exibe ou oculta o ícone de status</td>
+    </tr>
+    <tr>
+      <td><code>hasCloseIcon</code></td>
+      <td><code>boolean</code></td>
+      <td>Exibe ou oculta o botão de fechar</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>🎯 Eventos</h3>
+<ul>
+  <li><code>(atomClick)</code>: Disparado ao clicar no alerta</li>
+</ul>
