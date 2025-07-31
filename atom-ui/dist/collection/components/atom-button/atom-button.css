@@ -1,0 +1,25 @@
+:host {
+  display: inline-block;
+}
+
+.atom-button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: sans-serif;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+.atom-button.primary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+.atom-button.secondary {
+  background-color: #4b5563;
+  color: #ffffff;
+}
+.atom-button:hover {
+  opacity: 0.85;
+}

@@ -1,0 +1,2 @@
+import{p as o,g as t,b as a}from"./p-C63bCTfv.js";export{s as setNonce}from"./p-C63bCTfv.js";var r=()=>{const t=import.meta.url;const a={};if(t!==""){a.resourcesUrl=new URL(".",t).href}return o(a)};r().then((async o=>{await t();return a([["p-ad3d4639",[[1,"atom-alert",{device:[1],status:[1],icon:[1],text:[1],textColor:[1,"textcolor"],iconColor:[1,"iconcolor"],strokeColor:[1,"strokecolor"],hasCloseIcon:[4,"hascloseicon"],hasStatusIcon:[4,"hasstatusicon"]}]]],["p-1bd0abd7",[[1,"atom-button",{label:[1],type:[1],variant:[1]}]]]],o)}));
+//# sourceMappingURL=atom-ui.esm.js.map

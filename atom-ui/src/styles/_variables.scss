@@ -1,0 +1,48 @@
+// ===========================
+// Color Palette
+// ===========================
+$blue-600:     #2563eb;
+$blue-700:     #003a66;
+$gray-600:     #4b5563;
+$gray-700:     #374151;
+$red-600:      #dc2626;
+$red-700:      #520413;
+$green-600:    #16a34a;
+$green-700:    #074e25;
+$yellow-600:   #ca8a04;
+$yellow-700:   #644f13;
+
+$primary-color:   $blue-600;
+$secondary-color: $gray-600;
+$white:           #ffffff;
+
+// ===========================
+// Typography
+// ===========================
+$font-family-base: sans-serif;
+$font-weight-semibold: 600;
+$font-size-base: 1rem;
+
+// ===========================
+// Border Radius
+// ===========================
+$radius-base: 8px;
+
+// ===========================
+// Alert colors
+// ===========================
+$alert-success-bg:   #cff3de;
+$alert-success-border: $green-700;
+
+$alert-error-bg:     #f5ced5;
+$alert-error-border: $red-700;
+
+$alert-warning-bg:   #fef4d6;
+$alert-warning-border: $yellow-700;
+
+$alert-info-bg:      #ccdfee;
+$alert-info-border: #002744;
+
+$alert-radius: 5px;
+$alert-padding: 25px;
+$alert-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2);

@@ -1,0 +1,13 @@
+{
+  "entries": [
+    "components/atom-alert/atom-alert.js",
+    "components/atom-button/atom-button.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "4.33.1",
+    "typescriptVersion": "5.5.4"
+  },
+  "collections": [],
+  "bundles": []
+}

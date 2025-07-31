@@ -1,0 +1,102 @@
+@use '../../styles/variables' as *;
+
+// ===========================
+// Base alert layout
+// ===========================
+.alert {
+  height: 44px;
+  width: 30.5rem;
+  max-width: 1216px;
+  min-width: 384px;
+  border-radius: $alert-radius;
+  padding: $alert-padding;
+  display: flex;
+  align-items: center;
+  font-family: $font-family-base;
+  box-sizing: border-box;
+  box-shadow: $alert-box-shadow;
+  gap: 0.5rem;
+
+  &.alert--mobile {
+    width: 19.5rem;
+    height: 60px;
+  }
+
+  &.alert--success {
+    background-color: $alert-success-bg;
+    border: 1px solid $alert-success-border;
+  }
+
+  &.alert--error {
+    background-color: $alert-error-bg;
+    border: 1px solid $alert-error-border;
+  }
+
+  &.alert--warning {
+    background-color: $alert-warning-bg;
+    border: 1px solid $alert-warning-border;
+  }
+
+  &.alert--info {
+    background-color: $alert-info-bg;
+    border: 1px solid $alert-info-border;
+  }
+}
+
+// ===========================
+// Content
+// ===========================
+.content {
+  flex: 1;
+  font-size: $font-size-base;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+// ===========================
+// SVG Icon
+// ===========================
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+// ===========================
+// Close button
+// ===========================
+.close-icon {
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+// ===========================
+// Text color utility classes
+// ===========================
+.text-red-700    { color: $red-700; }
+.text-green-700  { color: $green-700; }
+.text-yellow-700 { color: $yellow-700; }
+.text-blue-700   { color: $blue-700; }
+.text-gray-700   { color: $gray-700; }
+
+// ===========================
+// Icon color utility classes
+// ===========================
+.icon-red-600    { color: $red-600; }
+.icon-green-600  { color: $green-600; }
+.icon-yellow-600 { color: $yellow-600; }
+.icon-blue-600   { color: $blue-600; }
+.icon-gray-600   { color: $gray-600; }
+
+// ===========================
+// Stroke color utility classes (bordas)
+// ===========================
+.stroke-red-200    { border-left-color: #fecaca; }
+.stroke-green-200  { border-left-color: #bbf7d0; }
+.stroke-yellow-200 { border-left-color: #979471; }
+.stroke-blue-200   { border-left-color: #bfdbfe; }
+.stroke-gray-200   { border-left-color: #e5e7eb; }
