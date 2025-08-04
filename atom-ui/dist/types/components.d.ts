@@ -48,6 +48,24 @@ export namespace Components {
          */
         "variant": 'primary' | 'secondary';
     }
+    interface MenuAccordion {
+        /**
+          * @default 'web'
+         */
+        "device": 'web' | 'mobile';
+        /**
+          * @default false
+         */
+        "expanded": boolean;
+        /**
+          * @default ''
+         */
+        "heading": string;
+        /**
+          * @default []
+         */
+        "items": string[];
+    }
 }
 export interface AtomAlertCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -92,9 +110,16 @@ declare global {
         prototype: HTMLAtomButtonElement;
         new (): HTMLAtomButtonElement;
     };
+    interface HTMLMenuAccordionElement extends Components.MenuAccordion, HTMLStencilElement {
+    }
+    var HTMLMenuAccordionElement: {
+        prototype: HTMLMenuAccordionElement;
+        new (): HTMLMenuAccordionElement;
+    };
     interface HTMLElementTagNameMap {
         "atom-alert": HTMLAtomAlertElement;
         "atom-button": HTMLAtomButtonElement;
+        "menu-accordion": HTMLMenuAccordionElement;
     }
 }
 declare namespace LocalJSX {
@@ -145,9 +170,28 @@ declare namespace LocalJSX {
          */
         "variant"?: 'primary' | 'secondary';
     }
+    interface MenuAccordion {
+        /**
+          * @default 'web'
+         */
+        "device"?: 'web' | 'mobile';
+        /**
+          * @default false
+         */
+        "expanded"?: boolean;
+        /**
+          * @default ''
+         */
+        "heading"?: string;
+        /**
+          * @default []
+         */
+        "items"?: string[];
+    }
     interface IntrinsicElements {
         "atom-alert": AtomAlert;
         "atom-button": AtomButton;
+        "menu-accordion": MenuAccordion;
     }
 }
 export { LocalJSX as JSX };
@@ -156,6 +200,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "atom-alert": LocalJSX.AtomAlert & JSXBase.HTMLAttributes<HTMLAtomAlertElement>;
             "atom-button": LocalJSX.AtomButton & JSXBase.HTMLAttributes<HTMLAtomButtonElement>;
+            "menu-accordion": LocalJSX.MenuAccordion & JSXBase.HTMLAttributes<HTMLMenuAccordionElement>;
         }
     }
 }

@@ -17,6 +17,7 @@ export class HomeComponent {
   components = [
     { name: 'Botão', path: '/button', description: 'Botão customizável do sistema' },
     { name: 'Alerta', path: '/alert', description: 'Componente de aviso/feedback visual' },
+    { name: 'Menu Accordion', path: '/menu-accordion', description: 'Componente de aviso/feedback visual' },
   ];
 
   get filteredComponents() {

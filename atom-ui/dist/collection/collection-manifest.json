@@ -1,7 +1,8 @@
 {
   "entries": [
     "components/atom-alert/atom-alert.js",
-    "components/atom-button/atom-button.js"
+    "components/atom-button/atom-button.js",
+    "components/menu-accordion/menu-accordion.js"
   ],
   "compiler": {
     "name": "@stencil/core",

@@ -1,0 +1,60 @@
+.accordion {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #f9fafb;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+.accordion.mobile {
+  font-size: 0.9rem;
+  width: 730px;
+}
+.accordion.web {
+  font-size: 1rem;
+}
+.accordion.expanded {
+  border-color: rgb(180.3902439024, 186.8780487805, 196.6097560976);
+}
+.accordion .accordion-header {
+  all: unset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 97%;
+  padding: 1rem;
+  background-color: #f3f4f6;
+  cursor: pointer;
+}
+.accordion .accordion-header .title {
+  font-weight: bold;
+  line-height: 1.2;
+}
+.accordion .accordion-header .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: currentColor;
+}
+.accordion .accordion-content {
+  padding: 0.5rem 1rem;
+  background-color: white;
+}
+.accordion .accordion-content .accordion-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  cursor: pointer;
+}
+.accordion .accordion-content .accordion-item span:first-child {
+  margin-right: 0.5rem;
+}
+.accordion .accordion-content .accordion-item .icon {
+  font-size: 1.2rem;
+}
+.accordion .accordion-content .accordion-item:last-child {
+  border-bottom: none;
+}

@@ -31,13 +31,14 @@ export class AtomAlert {
         return (h("button", { class: `close-icon ${this.iconColor || ''}`, "aria-label": "Fechar alerta", onClick: this.handleClick }, "\u2716"));
     }
     render() {
+        console.log('teste');
         const classes = [
             'alert',
             `alert--${this.status}`,
             this.device === 'mobile' ? 'alert--mobile' : '',
             this.strokeColor,
         ].join(' ');
-        return (h("div", { key: '92df9fc096072a732e1b08623df7f375008fb9a9', class: classes }, this.renderIcon(), h("div", { key: '245bbd61a7ae0576355dea425adae9bfc8eccbe5', class: `content ${this.textColor || ''}` }, this.text), this.renderCloseIcon()));
+        return (h("div", { key: '3f58332deaacf52ee09cbe1f2d5b47c291159de4', class: classes }, this.renderIcon(), h("div", { key: 'd069b3c17c528d180e841dcee5c289677346442f', class: `content ${this.textColor || ''}` }, this.text), this.renderCloseIcon()));
     }
     static get is() { return "atom-alert"; }
     static get encapsulation() { return "shadow"; }
