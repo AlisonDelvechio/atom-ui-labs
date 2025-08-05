@@ -61,10 +61,6 @@ export namespace Components {
           * @default ''
          */
         "heading": string;
-        /**
-          * @default []
-         */
-        "items": string[];
     }
 }
 export interface AtomAlertCustomEvent<T> extends CustomEvent<T> {
@@ -183,10 +179,6 @@ declare namespace LocalJSX {
           * @default ''
          */
         "heading"?: string;
-        /**
-          * @default []
-         */
-        "items"?: string[];
     }
     interface IntrinsicElements {
         "atom-alert": AtomAlert;

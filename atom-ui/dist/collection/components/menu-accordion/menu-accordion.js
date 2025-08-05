@@ -3,10 +3,12 @@ export class MenuAccordion {
     heading = '';
     device = 'web';
     expanded = false;
-    items = [];
     isExpanded;
     componentWillLoad() {
         this.isExpanded = this.expanded;
+    }
+    toggleAccordion() {
+        this.isExpanded = !this.isExpanded;
     }
     renderExpandIcon() {
         return this.isExpanded ? this.getExpandLessIcon() : this.getExpandMoreIcon();
@@ -17,16 +19,11 @@ export class MenuAccordion {
     getExpandLessIcon() {
         return (h("svg", { class: "icon", width: "24", height: "24", viewBox: "0 0 24 24" }, h("path", { d: "M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z" })));
     }
-    getChevronRightIcon() {
-        return (h("svg", { class: "icon", width: "24", height: "24", viewBox: "0 0 24 24" }, h("path", { d: "M10 17l5-5-5-5v10z" })));
-    }
-    toggleAccordion() {
-        this.isExpanded = !this.isExpanded;
-    }
     render() {
-        return (h("div", { key: 'c8b4d6ca5943b5b14b1de5c8480aee1f9507f141', class: `accordion ${this.device} ${this.isExpanded ? 'expanded' : ''}` }, h("button", { key: '8c8f86a762a7c2d6b13c379cca4846bf335c06c3', class: "accordion-header", onClick: () => this.toggleAccordion(), "aria-expanded": this.isExpanded }, h("span", { key: 'e3423d174c71a467b3a35361113ddf643833c0de', class: "title" }, this.heading), this.renderExpandIcon()), this.isExpanded && (h("div", { key: '48232b3d74bc1a7feb9990041d5f0d4744408e3a', class: "accordion-content" }, this.items.map((item) => (h("div", { class: "accordion-item" }, h("span", null, item), this.getChevronRightIcon())))))));
+        return (h("div", { key: 'b84472288da2f19de7cd26bd3217e6bbc254dae2', class: `accordion ${this.device} ${this.isExpanded ? 'expanded' : ''}` }, h("button", { key: '1375bfd07952dc121c188201484b43a42a1f75f8', class: "accordion-header", onClick: () => this.toggleAccordion(), "aria-expanded": this.isExpanded }, h("span", { key: '1da65b0b09fbe2b88433d3238317257ba38c81fb', class: "title" }, this.heading), this.renderExpandIcon()), h("div", { key: '8ef9c0551ba6f79c5b900be3d03e5d745f3f32ff', class: `accordion-content ${this.isExpanded ? 'expanded' : 'collapsed'}` }, h("div", { key: '3edc13f9a2d632ecfd63fb638baf8a4ec6802edf', class: "accordion-slot-wrapper" }, h("slot", { key: '8e424b70616c0ac466391ed8806776d635fa1413' })))));
     }
     static get is() { return "menu-accordion"; }
+    static get encapsulation() { return "shadow"; }
     static get originalStyleUrls() {
         return {
             "$": ["menu-accordion.scss"]
@@ -98,25 +95,6 @@ export class MenuAccordion {
                 "setter": false,
                 "reflect": false,
                 "defaultValue": "false"
-            },
-            "items": {
-                "type": "unknown",
-                "attribute": "items",
-                "mutable": false,
-                "complexType": {
-                    "original": "string[]",
-                    "resolved": "string[]",
-                    "references": {}
-                },
-                "required": false,
-                "optional": false,
-                "docs": {
-                    "tags": [],
-                    "text": ""
-                },
-                "getter": false,
-                "setter": false,
-                "defaultValue": "[]"
             }
         };
     }

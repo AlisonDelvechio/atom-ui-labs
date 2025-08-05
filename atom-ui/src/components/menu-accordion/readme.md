@@ -12,7 +12,6 @@
 | `device`   | `device`   |             | `"mobile" \| "web"` | `'web'` |
 | `expanded` | `expanded` |             | `boolean`           | `false` |
 | `heading`  | `heading`  |             | `string`            | `''`    |
-| `items`    | `items`    |             | `string[]`          | `[]`    |
 
 
 ----------------------------------------------

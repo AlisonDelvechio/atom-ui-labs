@@ -3,19 +3,21 @@ import { Component, Prop, State, h } from '@stencil/core';
 @Component({
   tag: 'menu-accordion',
   styleUrl: 'menu-accordion.scss',
-  // shadow: true,
-  shadow: false, //false apenas para teste
+  shadow: true,
 })
 export class MenuAccordion {
   @Prop() heading: string = '';
   @Prop() device: 'web' | 'mobile' = 'web';
   @Prop() expanded: boolean = false;
-  @Prop() items: string[] = [];
 
   @State() isExpanded: boolean;
 
   componentWillLoad() {
     this.isExpanded = this.expanded;
+  }
+
+  toggleAccordion() {
+    this.isExpanded = !this.isExpanded;
   }
 
   private renderExpandIcon() {
@@ -38,18 +40,6 @@ export class MenuAccordion {
     );
   }
 
-  private getChevronRightIcon() {
-    return (
-      <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
-        <path d="M10 17l5-5-5-5v10z" />
-      </svg>
-    );
-  }
-
-  toggleAccordion() {
-    this.isExpanded = !this.isExpanded;
-  }
-
   render() {
     return (
       <div class={`accordion ${this.device} ${this.isExpanded ? 'expanded' : ''}`}>
@@ -62,16 +52,11 @@ export class MenuAccordion {
           {this.renderExpandIcon()}
         </button>
 
-        {this.isExpanded && (
-          <div class="accordion-content">
-            {this.items.map((item) => (
-              <div class="accordion-item">
-                <span>{item}</span>
-                {this.getChevronRightIcon()}
-              </div>
-            ))}
+        <div class={`accordion-content ${this.isExpanded ? 'expanded' : 'collapsed'}`}>
+          <div class="accordion-slot-wrapper">
+            <slot></slot>
           </div>
-        )}
+        </div>
       </div>
     );
   }
