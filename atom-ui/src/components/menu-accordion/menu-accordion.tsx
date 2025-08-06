@@ -21,12 +21,16 @@ export class MenuAccordion {
   }
 
   private renderExpandIcon() {
-    return this.isExpanded ? this.getExpandLessIcon() : this.getExpandMoreIcon();
+    return (
+      <div class="icon-wrapper">
+        {this.isExpanded ? this.getExpandLessIcon() : this.getExpandMoreIcon()}
+      </div>
+    );
   }
 
   private getExpandMoreIcon() {
     return (
-      <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+      <svg class="icon" width="16" height="16" viewBox="0 0 24 24">
         <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
       </svg>
     );
@@ -34,7 +38,7 @@ export class MenuAccordion {
 
   private getExpandLessIcon() {
     return (
-      <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+      <svg class="icon" width="16" height="16" viewBox="0 0 24 24">
         <path d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
       </svg>
     );
