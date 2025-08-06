@@ -9,6 +9,9 @@
   font-size: 0.9rem;
   width: 730px;
 }
+.accordion.mobile .accordion-header {
+  width: 96%;
+}
 .accordion.web {
   font-size: 1rem;
 }
@@ -38,7 +41,6 @@
   fill: currentColor;
 }
 .accordion .accordion-content {
-  padding: 0.5rem 1rem;
   background-color: white;
   max-height: 0;
   overflow: hidden;
@@ -57,7 +59,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 0;
+  padding: 0.5rem 1rem;
   border-bottom: 1px solid #f3f4f6;
   color: inherit;
   text-decoration: none;
