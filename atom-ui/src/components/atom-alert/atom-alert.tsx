@@ -11,7 +11,7 @@ export class AtomAlert {
   @Prop() icon: 'check' | 'error' | 'warning' | 'info' = 'info';
   @Prop() text: string;
   @Prop({ attribute: 'textcolor' }) textColor: string;
-  @Prop({ attribute: 'iconcolor' }) iconColor: string; 
+  @Prop({ attribute: 'iconcolor' }) iconColor: string;
   @Prop({ attribute: 'strokecolor' }) strokeColor: string;
   @Prop({ attribute: 'hascloseicon' }) hasCloseIcon: boolean = false;
   @Prop({ attribute: 'hasstatusicon' }) hasStatusIcon: boolean = true;
@@ -72,8 +72,15 @@ export class AtomAlert {
     );
   }
 
+  private renderContent() {
+    return (
+      <div class={`content ${this.textColor || ''}`}>
+        {this.text ? this.text : <slot></slot>}
+      </div>
+    );
+  }
+
   render() {
-    console.log('teste');
     const classes = [
       'alert',
       `alert--${this.status}`,
@@ -84,9 +91,7 @@ export class AtomAlert {
     return (
       <div class={classes}>
         {this.renderIcon()}
-        <div class={`content ${this.textColor || ''}`}>
-          {this.text}
-        </div>
+        {this.renderContent()}
         {this.renderCloseIcon()}
       </div>
     );

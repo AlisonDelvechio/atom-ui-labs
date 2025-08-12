@@ -13,5 +13,6 @@ export declare class AtomAlert {
     private handleClick;
     private renderIcon;
     private renderCloseIcon;
+    private renderContent;
     render(): any;
 }

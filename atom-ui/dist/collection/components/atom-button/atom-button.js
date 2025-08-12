@@ -12,7 +12,7 @@ export class AtomButton {
         this.atomClick.emit();
     };
     render() {
-        return (h("button", { key: '93c47e09a9ea49a942b7f8b8f07a8457336f76f8', type: this.type, class: `atom-button ${this.variant}`, onClick: this.handleClick, "aria-label": this.label }, h("slot", { key: 'a4daa5d08e2fcfe38f9a2a9cd9b9236f9536ff79' })));
+        return (h("button", { key: '93e63f8999cc01daadf718bbb5d7b9e799ed2070', type: this.type, class: `atom-button ${this.variant}`, onClick: this.handleClick, "aria-label": this.label }, h("slot", { key: 'f9599e20105c43467e320519b970716c65375c25' })));
     }
     static get is() { return "atom-button"; }
     static get encapsulation() { return "shadow"; }

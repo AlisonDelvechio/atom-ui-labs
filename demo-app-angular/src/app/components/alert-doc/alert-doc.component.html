@@ -21,27 +21,29 @@
         device="web"
         status="success"
         icon="check"
-        text="Mensagem de sucesso"
         textcolor="text-green-700"
         strokeColor="stroke-green-200"
         iconColor="text-green-700"
         [hasStatusIcon]="true"
         [hasCloseIcon]="true"
         (atomClick)="handleStencilClick()"
-      ></atom-alert>
+      >
+        Mensagem de sucesso
+      </atom-alert>
 
       <atom-alert
         device="mobile"
         status="success"
         icon="check"
-        text="Mensagem de sucesso"
         textcolor="text-green-700"
         strokeColor="stroke-green-200"
         iconColor="text-green-700"
         [hasStatusIcon]="true"
         [hasCloseIcon]="true"
         (atomClick)="handleStencilClick()"
-      ></atom-alert>
+      >
+        Mensagem de sucesso
+      </atom-alert>
     </div>
   </div>
 
@@ -53,27 +55,29 @@
         device="web"
         status="warning"
         icon="warning"
-        text="Atenção: algo requer sua atenção."
         textcolor="text-yellow-700"
         strokeColor="stroke-yellow-200"
         iconColor="icon-yellow-600"
         [hasStatusIcon]="true"
         [hasCloseIcon]="true"
         (atomClick)="handleStencilClick()"
-      ></atom-alert>
+      >
+        Atenção: algo requer sua atenção.
+      </atom-alert>
 
       <atom-alert
         device="mobile"
         status="warning"
         icon="warning"
-        text="Atenção: algo requer sua atenção."
         textcolor="text-yellow-700"
         strokeColor="stroke-yellow-200"
         iconColor="icon-yellow-600"
         [hasStatusIcon]="true"
         [hasCloseIcon]="true"
         (atomClick)="handleStencilClick()"
-      ></atom-alert>
+      >
+        Atenção: algo requer sua atenção.
+      </atom-alert>
     </div>
   </div>
 
@@ -85,27 +89,29 @@
         device="web"
         status="error"
         icon="error"
-        text="Erro ao processar a ação."
         textcolor="text-red-700"
         strokeColor="stroke-red-200"
         iconColor="icon-red-600"
         [hasStatusIcon]="true"
         [hasCloseIcon]="true"
         (atomClick)="handleStencilClick()"
-      ></atom-alert>
+      >
+        Erro ao processar a ação.
+      </atom-alert>
 
       <atom-alert
         device="mobile"
         status="error"
         icon="error"
-        text="Erro ao processar a ação."
         textcolor="text-red-700"
         strokeColor="stroke-red-200"
         iconColor="icon-red-600"
         [hasStatusIcon]="true"
         [hasCloseIcon]="true"
         (atomClick)="handleStencilClick()"
-      ></atom-alert>
+      >
+        Erro ao processar a ação.
+      </atom-alert>
     </div>
   </div>
 
@@ -117,27 +123,29 @@
         device="web"
         status="info"
         icon="info"
-        text="Informação adicional."
         textcolor="text-blue-700"
         strokeColor="stroke-blue-200"
         iconColor="icon-blue-600"
         [hasStatusIcon]="true"
         [hasCloseIcon]="true"
         (atomClick)="handleStencilClick()"
-      ></atom-alert>
+      >
+        Informação adicional.
+      </atom-alert>
 
       <atom-alert
         device="mobile"
         status="info"
         icon="info"
-        text="Informação adicional."
         textcolor="text-blue-700"
         strokeColor="stroke-blue-200"
         iconColor="icon-blue-600"
         [hasStatusIcon]="true"
         [hasCloseIcon]="true"
         (atomClick)="handleStencilClick()"
-      ></atom-alert>
+      >
+        Informação adicional.
+      </atom-alert>
     </div>
   </div>
 
@@ -175,7 +183,7 @@
     <tr>
       <td><code>text</code></td>
       <td><code>string</code></td>
-      <td>Mensagem principal exibida no alerta</td>
+      <td>Mensagem principal exibida no alerta (opcional, pode usar slot)</td>
     </tr>
     <tr>
       <td><code>textcolor</code></td>

@@ -39,15 +39,17 @@ const AtomAlert = class {
             return null;
         return (index.h("button", { class: `close-icon ${this.iconColor || ''}`, "aria-label": "Fechar alerta", onClick: this.handleClick }, "\u2716"));
     }
+    renderContent() {
+        return (index.h("div", { class: `content ${this.textColor || ''}` }, this.text ? this.text : index.h("slot", null)));
+    }
     render() {
-        console.log('teste');
         const classes = [
             'alert',
             `alert--${this.status}`,
             this.device === 'mobile' ? 'alert--mobile' : '',
             this.strokeColor,
         ].join(' ');
-        return (index.h("div", { key: '3f58332deaacf52ee09cbe1f2d5b47c291159de4', class: classes }, this.renderIcon(), index.h("div", { key: 'd069b3c17c528d180e841dcee5c289677346442f', class: `content ${this.textColor || ''}` }, this.text), this.renderCloseIcon()));
+        return (index.h("div", { key: 'f88f31a559482b761ab80c729cfcbe9c92868546', class: classes }, this.renderIcon(), this.renderContent(), this.renderCloseIcon()));
     }
 };
 AtomAlert.style = atomAlertCss;

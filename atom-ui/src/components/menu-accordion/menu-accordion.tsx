@@ -9,7 +9,6 @@ export class MenuAccordion {
   @Prop() heading: string = '';
   @Prop() device: 'web' | 'mobile' = 'web';
   @Prop() expanded: boolean = false;
-
   @State() isExpanded: boolean;
 
   componentWillLoad() {
